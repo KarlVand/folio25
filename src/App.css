@@ -8,12 +8,53 @@
   background: 
     radial-gradient(closest-side, #888, #fff) 0/ 1em 1em space round, 
     radial-gradient(circle at center, #777, #fff);
-  background-color: darkblue;
+  background-color: lightblue;
   background-blend-mode: multiply;
   filter: contrast(2) brightness(0.8); 
   overflow: hidden;
 }
 
+#app {
+  position: relative;
+  margin: auto;
+  border: 15px black solid;
+  border-radius: 12px;
+  background-color: aliceblue;
+  /* responsive values */
+  width: 85vw;
+  height: 90vh;
+  
+}
 
+/* mobile landscape */
+@media screen and (min-width: 480px)  and (orientation: landscape) {
+  #app {
+    width: 90vw;
+    height: 85vh;
+  }
+}
 
+/* table portrait */
+@media screen and (min-width: 768px)  and (orientation: portrait) {
+  #app {
+    width: 90vw;
+    height: 95vh;
+  }
+}
+
+/* tablet landscape */
+@media screen and (min-width: 768px) and (orientation: landscape) {
+ 
+}
+
+/* Laptop */
+@media screen and (min-width: 1025px) {
+  
+}
+
+/* desktop + */
+@media screen and (min-width: 1900px) {
+
+  
+}
 
