@@ -1,8 +1,19 @@
+/* -------- main & BACKGROUND -------- */
+
 #root {
-  max-width: 1280px;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  border: red solid 1px;
+  display: flex;
+  background: 
+    radial-gradient(closest-side, #888, #fff) 0/ 1em 1em space round, 
+    radial-gradient(circle at center, #777, #fff);
+  background-color: darkblue;
+  background-blend-mode: multiply;
+  filter: contrast(2) brightness(0.8); 
+  overflow: hidden;
 }
+
+
+
 
