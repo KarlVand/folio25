@@ -5,21 +5,41 @@
   height: 100vh;
   margin: 0 auto;
   display: flex;
-  background: 
-    radial-gradient(closest-side, #888, #fff) 0/ 1em 1em space round, 
-    radial-gradient(circle at center, #777, #fff);
-  background-color: lightblue;
-  background-blend-mode: multiply;
-  filter: contrast(2) brightness(0.8); 
-  overflow: hidden;
+
+  /* background */
+  
+  background: white;
+  filter: contrast(40);
+  --dotSize: 0.25rem;
+  --bgSize: 1rem;
+  --bgPosition: calc(var(--bgSize) / 2);
+  --stop1: 0.05rem;
+  --stop2: 0.7rem;
+  
 }
+
+#root::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at center, black var(--stop1), transparent var(--stop2));
+  background-size: var(--bgSize) var(--bgSize);
+  background-position: 0 0, var(--bgPosition) var(--bgPosition);
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+  
+  
+}
+
+
+/* -------- RESPONSIVE LAYOUT -------- */
 
 #app {
   position: relative;
   margin: auto;
-  border: 15px black solid;
-  border-radius: 12px;
-  background-color: aliceblue;
+  border: 12px white solid;
+  background-color: black;
+  z-index: 5;
   /* responsive values */
   width: 85vw;
   height: 90vh;
@@ -44,17 +64,27 @@
 
 /* tablet landscape */
 @media screen and (min-width: 768px) and (orientation: landscape) {
+  #app {
+    width: 60vw;
+    height: 90vh;
+  }
  
 }
 
 /* Laptop */
 @media screen and (min-width: 1025px) {
-  
+  #app {
+    width: 60vw;
+    height: 90vh;
+  }
 }
 
 /* desktop + */
 @media screen and (min-width: 1900px) {
+  #app {
+    width: 50vw;
+    height: 90vh;
+  }
 
-  
 }
 
