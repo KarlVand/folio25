@@ -1,11 +1,15 @@
+
+
 #root {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
-/* ------------- BACKGROUND EFFECT ------------- */
+/* ------------------------------ BACKGROUND EFFECT ------------- */
   
 #backgroundWrap {
   position: absolute;
@@ -42,31 +46,28 @@
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: rgba(9, 59, 59, 1);
+    background-color: var(--primColor);
     mix-blend-mode: multiply;
     pointer-events: none;
   }
-  
+
+  /* ----------------------------------------------------------------- */
+
+
+
   #app {
     position: relative;
+    display: grid;
     margin: auto;
-    border: 12px white solid;
+    border: 12px var(--primColor) solid;
     background-color: black;
     z-index: 5;
     /* responsive values */
     width: 85vw;
-    height: 90vh;
+    height: 100%;
     
   }
   
-  
-  
-
-
-
-
-
-
 /* -------- RESPONSIVE LAYOUT -------- */
 
 
@@ -90,26 +91,37 @@
 /* tablet landscape */
 @media screen and (min-width: 768px) and (orientation: landscape) {
   #app {
-    width: 60vw;
+    width: 50vw;
     height: 90vh;
   }
- 
 }
 
-/* Laptop */
-@media screen and (min-width: 1025px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width: 1025px) {
   #app {
-    width: 60vw;
+    width: 50vw;
     height: 90vh;
   }
 }
-
-/* desktop + */
 @media screen and (min-width: 1900px) {
   #app {
     width: 50vw;
     height: 90vh;
   }
-
-}
+} */
 

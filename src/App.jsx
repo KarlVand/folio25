@@ -1,5 +1,7 @@
 
-import './App.css'
+import './assets/css/App.css';
+
+import Timezone from './elements/Timezone'; 
 
 function App() {
   
@@ -11,7 +13,9 @@ function App() {
       <div className="bgColor"></div>
     </div>
     
-    <div id='app'></div>
+    <div id='app'>
+      <Timezone />
+    </div>
     
       
      

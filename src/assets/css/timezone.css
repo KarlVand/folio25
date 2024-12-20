@@ -1,0 +1,13 @@
+
+#timeContainer {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color: var(--lighterColor);
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--primColor);
+}
