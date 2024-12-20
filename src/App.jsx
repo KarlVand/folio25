@@ -6,9 +6,14 @@ function App() {
 
   return (
     <>
-      <div id='app'>
-        
-      </div>
+    <div id="backgroundWrap">
+      <div className="halftone"></div>
+      <div className="bgColor"></div>
+    </div>
+    
+    <div id='app'></div>
+    
+      
      
     </>
   )

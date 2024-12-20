@@ -1,24 +1,32 @@
-/* -------- main & BACKGROUND -------- */
-
 #root {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: flex;
+}
 
-  /* background */
+/* ------------- BACKGROUND EFFECT ------------- */
   
+#backgroundWrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.halftone {
+  position: absolute;
   background: white;
+  inset: 0;
   filter: contrast(40);
   --dotSize: 0.25rem;
   --bgSize: 1rem;
   --bgPosition: calc(var(--bgSize) / 2);
   --stop1: 0.05rem;
   --stop2: 0.7rem;
-  
+  pointer-events: none;
 }
 
-#root::after {
+.halftone::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -26,25 +34,42 @@
     radial-gradient(circle at center, black var(--stop1), transparent var(--stop2));
   background-size: var(--bgSize) var(--bgSize);
   background-position: 0 0, var(--bgPosition) var(--bgPosition);
-  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
-  
-  
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)); 
 }
+
+.bgColor {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 59, 59, 1);
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+  
+  #app {
+    position: relative;
+    margin: auto;
+    border: 12px white solid;
+    background-color: black;
+    z-index: 5;
+    /* responsive values */
+    width: 85vw;
+    height: 90vh;
+    
+  }
+  
+  
+  
+
+
+
+
 
 
 /* -------- RESPONSIVE LAYOUT -------- */
 
-#app {
-  position: relative;
-  margin: auto;
-  border: 12px white solid;
-  background-color: black;
-  z-index: 5;
-  /* responsive values */
-  width: 85vw;
-  height: 90vh;
-  
-}
+
 
 /* mobile landscape */
 @media screen and (min-width: 480px)  and (orientation: landscape) {
