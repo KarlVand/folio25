@@ -1,6 +1,7 @@
 
 import './assets/css/App.css';
 
+import StackSlider from './elements/StackSlider';
 import Timezone from './elements/Timezone'; 
 
 function App() {
@@ -15,10 +16,8 @@ function App() {
     
     <div id='app'>
       <Timezone />
-    </div>
-    
-      
-     
+      <StackSlider />
+    </div>  
     </>
   )
 }
