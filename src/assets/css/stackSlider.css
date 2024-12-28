@@ -1,6 +1,17 @@
 
 .sliderContainer {
     width: 100%;
-    height: auto;
-    background-color: green;
+    height: fit-content;
+    background-color: var(--darkestColor);
+    
+}
+
+.slider {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.svgIcon {
+    height: 80px;
+    padding: 1rem;
 }

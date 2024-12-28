@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useEffect } from 'react';
+import { motion, useAnimationControls } from 'motion/react';
 
 import '../assets/css/stackSlider.css';
 
@@ -34,8 +34,50 @@ const icons1 = [
 
 
 function StackSlider() {
+    const controls = useAnimationControls();
+    const duplicatedIcons = [...icons1, ...icons1];
+
+    const startAnimation = async () => {
+        await controls.start({
+            x: [`0%`, `-50%`], 
+            transition: {
+                duration: 18,
+                ease: "linear",
+                repeat: Infinity
+            }
+        });
+    };
+
+    useEffect(() => {
+        startAnimation();
+    }, []);
+
+
     return (
         <div className='sliderContainer'>
+            <motion.div 
+                className='slider' 
+                animate={controls} 
+                onAnimationComplete={() => {
+                    controls.set({ x: '0%' });
+                    startAnimation();
+                }}
+            > 
+                {duplicatedIcons.map((icon, index) => (
+                    <motion.div
+                        key={index}
+                        className="icon"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <img 
+                            src={icon.path} 
+                            alt={icon.name}
+                            className="svgIcon" // Consistent sizing
+                        />
+                    </motion.div>
+                ))}
+            </motion.div>
 
             
         </div>
