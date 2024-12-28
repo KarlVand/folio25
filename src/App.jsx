@@ -2,6 +2,7 @@
 import './assets/css/App.css';
 
 import StackSlider from './elements/StackSlider';
+import TechSlider from './elements/TechSlider';
 import Timezone from './elements/Timezone'; 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div id='app'>
       <Timezone />
       <StackSlider />
+      <TechSlider />
     </div>  
     </>
   )

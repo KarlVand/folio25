@@ -3,6 +3,7 @@
     width: 100%;
     height: fit-content;
     background-color: var(--darkestColor);
+    padding: 0 auto;
     
 }
 
@@ -12,6 +13,6 @@
 }
 
 .svgIcon {
-    height: 80px;
+    height: 50px;
     padding: 1rem;
 }
