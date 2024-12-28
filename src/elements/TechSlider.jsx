@@ -39,11 +39,12 @@ function StackSlider() {
 
     const startAnimation = async () => {
         await controls.start({
-            x: [`-50%`, `0%`], 
+            x: [`-50%`, `50%`], 
             transition: {
-                duration: 18,
+                duration: 20,
                 ease: "linear",
-                repeat: Infinity
+                repeat: Infinity,
+                repeatType: "loop"
             }
         });
     };
@@ -67,13 +68,13 @@ function StackSlider() {
                     <motion.div
                         key={index}
                         className="icon"
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
                     >
                         <img 
                             src={icon.path} 
                             alt={icon.name}
-                            className="svgIcon" // Consistent sizing
+                            className="svgIcon" 
                         />
                     </motion.div>
                 ))}

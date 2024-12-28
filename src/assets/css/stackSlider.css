@@ -1,18 +1,47 @@
 
 .sliderContainer {
+    position: relative;
     width: 100%;
     height: fit-content;
-    background-color: var(--darkestColor);
-    padding: 0 auto;
+    background-color: var(--darkerColor);
+    margin-top: 1rem;
+    overflow: hidden;
     
 }
 
 .slider {
     display: flex;
+    position: relative;
+    width: 100%;
     justify-content: space-evenly;
+    
 }
 
 .svgIcon {
-    height: 50px;
+    height: 30px;
     padding: 1rem;
 }
+
+/* mobile landscape */
+@media screen and (min-width: 480px)  and (orientation: landscape) {
+    .svgIcon {
+        height: 27px;
+    }
+    
+  }
+  
+  /* table portrait */
+  @media screen and (min-width: 768px)  and (orientation: portrait) {
+    .svgIcon {
+        height: 40px;
+    }
+    
+}
+  
+  /* tablet landscape */
+  @media screen and (min-width: 768px) and (orientation: landscape) {
+    .svgIcon {
+        height: 50px;
+    }
+    
+  }
