@@ -39,9 +39,10 @@ function StackSlider() {
 
     const startAnimation = async () => {
         await controls.start({
-            x: [`50%`, `-50%`], 
+            x: [`0%`, `-50%`], 
+            
             transition: {
-                duration: 10,
+                duration: 15,
                 ease: "linear",
                 repeat: Infinity,
                 repeatType: "loop"
