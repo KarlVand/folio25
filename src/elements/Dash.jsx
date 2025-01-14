@@ -7,11 +7,14 @@ function Dash() {
     <div id="dash">
       <div id="dashWrap">
         <div id="dashTitle">
-          <h1>Hi, I'm <span className="highlight">Dylan</span></h1>
-          <h2>Web Developer</h2>
+          <h1>Hi, I'm <span className="highlight">Karl</span></h1>
+          <h2>Front-End Developer</h2>
         </div>
         <div id="dashContent">
-          <p>Front-end web developer with a passion for creating beautiful and functional websites. I have experience with HTML, CSS, JavaScript, React, and Node.js. I am a quick learner and always eager to expand my knowledge and skills.</p>
+          <p>with a passion for creating 
+            <br></br><span>beautiful</span> and functional websites.
+            
+          </p>
         </div>
       </div>
     </div>

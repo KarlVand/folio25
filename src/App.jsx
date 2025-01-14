@@ -18,8 +18,9 @@ function App() {
     </div>
     
     <div id='app'>
-      <Dash />
+      
       <Timezone />
+      <Dash />
       <StackSlider />
       <TechSlider />
     </div>  
