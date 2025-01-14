@@ -17,18 +17,18 @@ import icon11 from '../assets/stackIcons/JSON.svg';
 import icon12 from '../assets/stackIcons/Three.js.svg';
 
 const icons1 = [
-    { path: icon1, name: 'HTML5' },
-    { path: icon2, name: 'CSS3' },
-    { path: icon3, name: 'PHP' },
-    { path: icon4, name: 'JavaScript' },
-    { path: icon5, name: 'React' },
-    { path: icon6, name: 'Sass' },
-    { path: icon7, name: 'Tailwind CSS' },
-    { path: icon8, name: 'Node.js' },
-    { path: icon9, name: 'Bootstrap' },
-    { path: icon10, name: 'MySQL' },
-    { path: icon11, name: 'Markdown' },
-    { path: icon12, name: 'Git' }
+    { path: icon1, name: 'Babel' },
+    { path: icon2, name: 'Github' },
+    { path: icon3, name: 'Vscode' },
+    { path: icon4, name: 'Docker' },
+    { path: icon5, name: 'Linux' },
+    { path: icon6, name: 'NPM' },
+    { path: icon7, name: 'Oh my zsh' },
+    { path: icon8, name: 'Ubuntu' },
+    { path: icon9, name: 'Inkscape' },
+    { path: icon10, name: 'Vite.js' },
+    { path: icon11, name: 'JSON' },
+    { path: icon12, name: 'Three.js' }
 ];
 
 

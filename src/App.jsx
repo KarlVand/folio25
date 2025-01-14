@@ -1,9 +1,11 @@
 
 import './assets/css/App.css';
 
+import Dash from './elements/Dash';
+import Timezone from './elements/Timezone'; 
 import StackSlider from './elements/StackSlider';
 import TechSlider from './elements/TechSlider';
-import Timezone from './elements/Timezone'; 
+
 
 function App() {
   
@@ -16,6 +18,7 @@ function App() {
     </div>
     
     <div id='app'>
+      <Dash />
       <Timezone />
       <StackSlider />
       <TechSlider />
@@ -24,4 +27,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimationControls } from 'motion/react';
 
 import '../assets/css/stackSlider.css';
@@ -35,6 +35,7 @@ const icons1 = [
 
 function StackSlider() {
     const controls = useAnimationControls();
+    const [isHovered, setIsHovered] = useState(false);
     const duplicatedIcons = [...icons1, ...icons1];
 
     const startAnimation = async () => {
@@ -42,11 +43,12 @@ function StackSlider() {
             x: [`0%`, `-50%`], 
             
             transition: {
-                duration: 15,
+                duration: duration,
                 ease: "linear",
                 repeat: Infinity,
                 repeatType: "loop"
             }
+        
         });
     };
 
@@ -54,23 +56,39 @@ function StackSlider() {
         startAnimation();
     }, []);
 
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+        startAnimation(30);
+    }
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+        startAnimation(15);
+    }
+
 
     return (
-        <div className='sliderContainer'>
+        <div className='sliderContainer'
+            
+        >
             <motion.div 
                 className='slider' 
                 animate={controls} 
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
                 onAnimationComplete={() => {
                     controls.set({ x: '0%' });
-                    startAnimation();
-                }}
+                    startAnimation(isHovered ? 30 : 15);
+                    
+                }
+            }
             > 
                 {duplicatedIcons.map((icon, index) => (
                     <motion.div
                         key={index}
                         className="icon"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                        whileHover={{ scale: 1.2, transition: { duration: 0.3 } }}
+                        whileTap={{ scale: 0.8 }}
                     >
                         <img 
                             src={icon.path} 
