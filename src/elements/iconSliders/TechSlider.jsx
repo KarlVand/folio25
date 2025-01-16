@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimationControls } from 'motion/react';
 
-import '../assets/css/stackSlider.css';
+import './stackSlider.css';
 
-import icon1 from '../assets/stackIcons/Babel.svg';
-import icon2 from '../assets/stackIcons/GitHub.svg';
-import icon3 from '../assets/stackIcons/VSCode.svg';
-import icon4 from '../assets/stackIcons/Docker.svg';
-import icon5 from '../assets/stackIcons/Linux.svg';
-import icon6 from '../assets/stackIcons/NPM.svg';
-import icon7 from '../assets/stackIcons/Oh my zsh.svg';
-import icon8 from '../assets/stackIcons/Ubuntu.svg';
-import icon9 from '../assets/stackIcons/Inkscape.svg';
-import icon10 from '../assets/stackIcons/Vite.js.svg';
-import icon11 from '../assets/stackIcons/JSON.svg';
-import icon12 from '../assets/stackIcons/Three.js.svg';
+import icon1 from './techIcons/Babel.svg';
+import icon2 from './techIcons/GitHub.svg';
+import icon3 from './techIcons/VSCode.svg';
+import icon4 from './techIcons/Docker.svg';
+import icon5 from './techIcons/Linux.svg';
+import icon6 from './techIcons/NPM.svg';
+import icon7 from './techIcons/Oh my zsh.svg';
+import icon8 from './techIcons/Ubuntu.svg';
+import icon9 from './techIcons/Inkscape.svg';
+import icon10 from './techIcons/Vite.js.svg';
+import icon11 from './techIcons/JSON.svg';
+import icon12 from './techIcons/Three.js.svg';
 
 const icons1 = [
     { path: icon1, name: 'Babel' },

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../assets/css/dash.css';
+import './dash.css';
 
 function Dash() {
   return ( 

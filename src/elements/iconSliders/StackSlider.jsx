@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useAnimationControls } from 'motion/react';
 
-import '../assets/css/stackSlider.css';
+import './stackSlider.css';
 
-import icon1 from '../assets/stackIcons/HTML5.svg';
-import icon2 from '../assets/stackIcons/CSS3.svg';
-import icon3 from '../assets/stackIcons/PHP.svg';
-import icon4 from '../assets/stackIcons/JavaScript.svg';
-import icon5 from '../assets/stackIcons/React.svg';
-import icon6 from '../assets/stackIcons/Sass.svg';
-import icon7 from '../assets/stackIcons/Tailwind_CSS_Logo.svg';
-import icon8 from '../assets/stackIcons/Node.js.svg';
-import icon9 from '../assets/stackIcons/Bootstrap.svg';
-import icon10 from '../assets/stackIcons/MySQL.svg';
-import icon11 from '../assets/stackIcons/Markdown.svg';
-import icon12 from '../assets/stackIcons/Git.svg';
+import icon1 from './stackIcons/HTML5.svg';
+import icon2 from './stackIcons/CSS3.svg';
+import icon3 from './stackIcons/PHP.svg';
+import icon4 from './stackIcons/JavaScript.svg';
+import icon5 from './stackIcons/React.svg';
+import icon6 from './stackIcons/Sass.svg';
+import icon7 from './stackIcons/Tailwind_CSS_Logo.svg';
+import icon8 from './stackIcons/Node.js.svg';
+import icon9 from './stackIcons/Bootstrap.svg';
+import icon10 from './stackIcons/MySQL.svg';
+import icon11 from './stackIcons/Markdown.svg';
+import icon12 from './stackIcons/Git.svg';
 
 const icons1 = [
     { path: icon1, name: 'HTML5' },

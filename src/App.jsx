@@ -1,10 +1,10 @@
 
-import './assets/css/App.css';
+import './App.css';
 
-import Dash from './elements/Dash';
-import Timezone from './elements/Timezone'; 
-import StackSlider from './elements/StackSlider';
-import TechSlider from './elements/TechSlider';
+import Dash from './elements/dashboard/Dash';
+import Timezone from './elements/timezone/Timezone'; 
+import StackSlider from './elements/iconSliders/StackSlider';
+import TechSlider from './elements/iconSliders/TechSlider';
 
 
 function App() {
