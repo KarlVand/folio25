@@ -6,7 +6,7 @@
     width: 100%;
     height: fit-content;
     max-height: 3rem; 
-    justify-content: space-evenly;
+    justify-content:end;
     background-color: var(--darkestColor);
     border: 5px solid var(--primColor);
     border-radius: 0 0 25px 25px;
@@ -14,12 +14,35 @@
     padding: 0 auto;
 }
 
-h1 {
+#timeContainer > * {
+    position: relative;
+    margin : 0.5rem 0;
     font-size: 1.5em;
     color: var(--lighterColor);
+    padding-right: 1rem;
+    
 }
 
-p {
-    font-size: 1.5em;
-    color: var(--lighterColor);
+/* Time display */
+#span {
+    font-weight: 400;
+    width: fit-content;  
+    right: -0.5rem; 
+} 
+
+/* Extra display */
+span {
+    position: relative;
+    font-weight: 600;
+    
 }
+
+
+.display.brussels {
+    right: 1rem;
+}
+
+
+
+
+
