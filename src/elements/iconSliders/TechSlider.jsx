@@ -17,6 +17,7 @@ import icon11 from './techIcons/JSON.svg';
 import icon12 from './techIcons/Three.js.svg';
 
 
+
 const icons1 = [
     { path: icon1, name: 'Babel' },
     { path: icon2, name: 'Github' },
@@ -49,34 +50,30 @@ function TechSlider() {
                 repeat: Infinity,
                 repeatType: "loop"    
             }
-        });
+        });    
     };
-
     
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-        controls.stop();
-    }
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
         startAnimation();
-    }
-
-
-    useEffect(() => {
-        startAnimation();
-    }, []);
     
-    useEffect(() => {
-        isHovered ? controls.stop() : startAnimation();
-    }, [isHovered]);
+        const handleMouseEnter = () => {
+            setIsHovered(true);     
+        }
 
-   
+        const handleMouseLeave = () => {
+            setIsHovered(false);
+        }
+
+        useEffect(() => {
+            isHovered ? controls.stop() : controls.mount();
+        }, [isHovered]);
+        
+
 
     
 
+        
+        
+            
 
     return (
         <div className='techSliderContainer'>
