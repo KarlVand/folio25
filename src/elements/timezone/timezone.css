@@ -24,7 +24,7 @@
 }
 
 /* Time display */
-#span {
+#time, #date {
     font-weight: 400;
     width: fit-content;  
     right: -0.5rem; 

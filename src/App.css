@@ -1,5 +1,4 @@
 
-
 #root {
   width: 100vw;
   height: 100vh;
@@ -9,8 +8,8 @@
   justify-content: start;
 }
 
-/* ------------------------------ BACKGROUND EFFECT ------------- */
-  
+/* ----- BACKGROUND EFFECT ----- */
+
 #backgroundWrap {
   position: absolute;
   width: 100%;
@@ -50,12 +49,11 @@
     mix-blend-mode: multiply;
     pointer-events: none;
   }
-
-  /* ----------------------------------------------------------------- */
-
+  /* ------------------------------ */
 
 
   #app {
+    /* general window display */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -66,9 +64,9 @@
     /* responsive values */
     width: 85vw;
     height: 100%;
-    overflow: hidden;
-    
+    overflow: hidden;  
   }
+  
   
 /* -------- RESPONSIVE LAYOUT -------- */
 
@@ -80,6 +78,7 @@
     width: 90vw;
     height: 85vh;
   }
+  
 }
 
 /* table portrait */

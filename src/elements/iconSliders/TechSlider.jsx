@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimationControls } from 'motion/react';
 
 import './stackSlider.css';
@@ -15,6 +15,7 @@ import icon9 from './techIcons/Inkscape.svg';
 import icon10 from './techIcons/Vite.js.svg';
 import icon11 from './techIcons/JSON.svg';
 import icon12 from './techIcons/Three.js.svg';
+
 
 const icons1 = [
     { path: icon1, name: 'Babel' },
@@ -33,9 +34,11 @@ const icons1 = [
 
 
 
-function StackSlider() {
+
+function TechSlider() {
     const controls = useAnimationControls();
     const duplicatedIcons = [...icons1, ...icons1];
+    const [isHovered, setIsHovered] = useState(false);
 
     const startAnimation = async () => {
         await controls.start({
@@ -44,14 +47,35 @@ function StackSlider() {
                 duration: 15,
                 ease: "linear",
                 repeat: Infinity,
-                repeatType: "loop"
+                repeatType: "loop"    
             }
         });
     };
 
+    
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+        controls.stop();
+    }
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+        startAnimation();
+    }
+
+
     useEffect(() => {
         startAnimation();
     }, []);
+    
+    useEffect(() => {
+        isHovered ? controls.stop() : startAnimation();
+    }, [isHovered]);
+
+   
+
+    
 
 
     return (
@@ -63,6 +87,8 @@ function StackSlider() {
                     controls.set({ x: '0%' });
                     startAnimation();
                 }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
             > 
                 {duplicatedIcons.map((icon, index) => (
                     <motion.div
@@ -70,7 +96,8 @@ function StackSlider() {
                         className="icon"
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                    >
+                        
+                    >   
                         <img 
                             src={icon.path} 
                             alt={icon.name}
@@ -86,4 +113,4 @@ function StackSlider() {
 
 }
 
-export default StackSlider;
+export default TechSlider;

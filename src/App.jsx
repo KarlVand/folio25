@@ -19,7 +19,7 @@ function App() {
     
     <div id='app'>
       
-      <Timezone />
+      
       <Dash />
       <StackSlider />
       <TechSlider />
