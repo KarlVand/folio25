@@ -15,6 +15,7 @@ import icon9 from './techIcons/Inkscape.svg';
 import icon10 from './techIcons/Vite.js.svg';
 import icon11 from './techIcons/JSON.svg';
 import icon12 from './techIcons/Three.js.svg';
+import { use } from 'react';
 
 
 
@@ -37,43 +38,39 @@ const icons1 = [
 
 
 function TechSlider() {
+
     const controls = useAnimationControls();
     const duplicatedIcons = [...icons1, ...icons1];
     const [isHovered, setIsHovered] = useState(false);
 
-    const startAnimation = async () => {
-        await controls.start({
+   function startAnimation() {
+        controls.start({
             x: [`-50%`, `0%`], 
             transition: {
                 duration: 15,
                 ease: "linear",
                 repeat: Infinity,
                 repeatType: "loop"    
-            }
-        });    
-    };
-    
-        startAnimation();
-    
-        const handleMouseEnter = () => {
-            setIsHovered(true);     
-        }
+            }        
+        }); 
+    }
+    startAnimation();
 
-        const handleMouseLeave = () => {
-            setIsHovered(false);
-        }
+    const handleMouseEnter = () => {
+        setIsHovered(true);      
+    }
 
-        useEffect(() => {
-            isHovered ? controls.stop() : controls.mount();
-        }, [isHovered]);
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    }
+
+    useEffect(() => {
+        isHovered ? controls.stop() : controls.mount();
+    }, [isHovered]);    
+        
+    
         
 
-
-    
-
-        
-        
-            
 
     return (
         <div className='techSliderContainer'>
@@ -82,7 +79,7 @@ function TechSlider() {
                 animate={controls} 
                 onAnimationComplete={() => {
                     controls.set({ x: '0%' });
-                    startAnimation();
+                    controls.set(currentTransition);
                 }}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
