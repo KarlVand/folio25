@@ -5,7 +5,7 @@ import Dash from './elements/dashboard/Dash';
 import Timezone from './elements/timezone/Timezone'; 
 import StackSlider from './elements/iconSliders/StackSlider';
 import TechSlider from './elements/iconSliders/TechSlider';
-import Canvas from './elements/iframeGhub/iframeGhub';
+import Canvas from './elements/canvas1/canvas1';
 
 function App() {
   
